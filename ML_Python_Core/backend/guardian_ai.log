@@ -1088,3 +1088,474 @@ AttributeError: 'str' object has no attribute 'isoformat'. Did you mean: 'format
 2025-06-18 22:41:12,033 - GuardianAI - INFO - 127.0.0.1 - - [18/Jun/2025 22:41:12] "GET /api/health HTTP/1.1" 200 -
 2025-06-18 22:41:12,044 - GuardianAI - INFO - 127.0.0.1 - - [18/Jun/2025 22:41:12] "POST /api/login HTTP/1.1" 200 -
 2025-06-18 22:41:12,163 - GuardianAI - INFO - 127.0.0.1 - - [18/Jun/2025 22:41:12] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:36:41,463 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:36:41,486 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 11:36:41,487 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 11:36:41,509 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:36:54,576 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:36:54,590 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:36:54,603 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:37:15,574 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:37:15,575 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:37:15] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:37:15,587 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:37:15] "POST /api/login HTTP/1.1" 200 -
+2025-06-21 11:37:15,672 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:37:15] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:40:47,216 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:40:47,237 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 11:40:47,238 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 11:40:47,259 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:40:59,625 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:40:59,644 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:40:59,661 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:41:06,586 - GuardianAI - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\logging\\handlers.py', reloading
+2025-06-21 11:41:06,901 - GuardianAI - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\logging\\config.py', reloading
+2025-06-21 11:41:09,026 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:41:23,366 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:41:23,381 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:41:23,391 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:42:06,649 - GuardianAI - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\raw_unicode_escape.py', reloading
+2025-06-21 11:42:06,651 - GuardianAI - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-06-21 11:42:09,230 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:42:29,114 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:42:29,147 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:42:29,183 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:42:30,769 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\streamlit\\emojis.py', reloading
+2025-06-21 11:42:32,198 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:42:45,571 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:42:45,591 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:42:45,619 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:42:45,901 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:42:45,904 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:42:45] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:42:58,783 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:42:58,784 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:42:58] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:43:23,017 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:43:23,018 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:43:23] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:43:37,213 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:43:37,214 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:43:37] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:43:37,226 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:43:37] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+2025-06-21 11:44:20,311 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\ui_app.py', reloading
+2025-06-21 11:44:20,853 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\ui_app.py', reloading
+2025-06-21 11:44:20,855 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\ui_app.py', reloading
+2025-06-21 11:44:22,979 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:44:47,081 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:44:47,100 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:44:47,117 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:45:24,918 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:45:24,941 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 11:45:24,941 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 11:45:24,961 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:45:37,352 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:45:37,365 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:45:37,377 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:45:48,771 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:45:48,773 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:45:48] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:00,606 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:00,620 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:00] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:00,727 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:00] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:46:01,540 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\__init__.py', reloading
+2025-06-21 11:46:01,557 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\vegalite\\__init__.py', reloading
+2025-06-21 11:46:01,569 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\vegalite\\v5\\__init__.py', reloading
+2025-06-21 11:46:01,583 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\expr\\__init__.py', reloading
+2025-06-21 11:46:01,596 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\expr\\core.py', reloading
+2025-06-21 11:46:01,606 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\utils\\__init__.py', reloading
+2025-06-21 11:46:01,620 - GuardianAI - INFO -  * Detected change in 'C:\\Users\\ACER\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\altair\\utils\\core.py', reloading
+2025-06-21 11:46:03,322 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:46:17,390 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:46:17,406 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:46:17,417 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:46:17,642 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:17,644 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:17] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:17,645 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:17,647 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:17] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:17,774 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:17,775 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:17] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:25,569 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:25,570 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:25] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:25,662 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:25] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:46:45,523 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:45,524 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:45] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:45,628 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:45] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:46:53,636 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:46:53,637 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:53] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:46:53,721 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:46:53] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:47:17,828 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 11:47:17,829 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:47:17] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 11:47:17,927 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 11:47:17] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 11:48:16,370 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\train_model.py', reloading
+2025-06-21 11:48:16,372 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\train_model.py', reloading
+2025-06-21 11:48:17,519 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 11:48:34,191 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 11:48:34,206 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 11:48:34,218 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 11:51:19,453 - GuardianAI - INFO - Loaded 1000 samples from phishing
+2025-06-21 11:51:19,550 - GuardianAI - ERROR - Dataset cicids missing required columns after processing.
+2025-06-21 11:51:19,551 - GuardianAI - WARNING - Failed to load cicids
+2025-06-21 11:51:20,397 - GuardianAI - INFO - Loaded 1000 samples from ember
+2025-06-21 11:51:20,399 - GuardianAI - INFO - Combined 2000 total samples from 2 datasets
+2025-06-21 11:51:20,405 - GuardianAI - INFO - Class distribution after combining: {1: 850, 0: 350, 3: 100, 6: 100, 4: 100, 5: 100, 11: 50, 2: 50, 8: 50, 7: 50, 13: 50, 9: 50, 10: 50, 12: 50}
+2025-06-21 11:51:24,374 - GuardianAI - INFO - Applied SMOTE. New class distribution: {'Benign': np.int64(350), 'Intrusion': np.int64(350), 'DDoS': np.int64(350), 'Phishing': np.int64(350), 'Malware': np.int64(350), '3': np.int64(350), '2': np.int64(350), '6': np.int64(350), '11': np.int64(350), '5': np.int64(350), '8': np.int64(350), '7': np.int64(350), '4': np.int64(350), '13': np.int64(350), '9': np.int64(350), '10': np.int64(350), '12': np.int64(350)}
+2025-06-21 11:51:40,400 - GuardianAI - INFO - Stratified 5-fold CV accuracy: 0.7829
+2025-06-21 11:51:45,438 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.8036974789915966, 'precision': 0.9547392079361389, 'recall': 0.8036974789915966, 'f1_score': 0.7884938457294557}
+2025-06-21 11:51:45,569 - GuardianAI - INFO - Model saved to guardian_model.pkl
+2025-06-21 11:51:45,569 - GuardianAI - INFO - Model saved successfully to guardian_model.pkl
+2025-06-21 11:51:45,585 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.8036974789915966, 'precision': 0.9547392079361389, 'recall': 0.8036974789915966, 'f1_score': 0.7884938457294557, 'cv_accuracy': np.float64(0.7828571428571428)}
+2025-06-21 11:51:45,712 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 11:51:45,713 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 11:59:47,810 - GuardianAI - INFO - Loaded 1000 samples from phishing
+2025-06-21 11:59:47,930 - GuardianAI - WARNING - Label column ' Label' not found in cicids.
+2025-06-21 11:59:47,931 - GuardianAI - WARNING - Failed to load cicids
+2025-06-21 11:59:49,634 - GuardianAI - INFO - Loaded 1000 samples from ember
+2025-06-21 11:59:49,638 - GuardianAI - INFO - Loaded 50 samples from violent_threats
+2025-06-21 11:59:49,641 - GuardianAI - INFO - Combined 2050 total samples from 3 datasets
+2025-06-21 11:59:49,642 - GuardianAI - INFO - Class distribution after combining: {1: 850, 0: 350, 3: 100, 6: 100, 5: 100, 4: 100, 11: 50, 2: 50, 8: 50, 7: 50, 13: 50, 9: 50, 10: 50, 12: 50, 'Violent Threat': 49, 'Violent Threat ': 1}
+2025-06-21 11:59:54,147 - GuardianAI - WARNING - SMOTE failed: Expected n_neighbors <= n_samples_fit, but n_neighbors = 6, n_samples_fit = 1, n_samples = 1
+2025-06-21 11:59:58,554 - GuardianAI - INFO - Stratified 5-fold CV accuracy: 0.4376
+2025-06-21 11:59:59,614 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.6175609756097561, 'precision': 0.9092143726192506, 'recall': 0.6175609756097561, 'f1_score': 0.5962788914021309}
+2025-06-21 11:59:59,707 - GuardianAI - INFO - Model saved to guardian_model.pkl
+2025-06-21 11:59:59,708 - GuardianAI - INFO - Model saved successfully to guardian_model.pkl
+2025-06-21 11:59:59,715 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.6175609756097561, 'precision': 0.9092143726192506, 'recall': 0.6175609756097561, 'f1_score': 0.5962788914021309, 'cv_accuracy': np.float64(0.43756097560975615)}
+2025-06-21 11:59:59,811 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 11:59:59,812 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 12:07:00,518 - GuardianAI - INFO - Loaded 1000 samples from phishing
+2025-06-21 12:07:00,930 - GuardianAI - INFO - Loaded 1000 samples from cicids
+2025-06-21 12:07:02,112 - GuardianAI - INFO - Loaded 1000 samples from ember
+2025-06-21 12:07:02,116 - GuardianAI - INFO - Loaded 50 samples from violent_threats
+2025-06-21 12:07:02,120 - GuardianAI - INFO - Combined 3050 total samples from 4 datasets
+2025-06-21 12:07:02,121 - GuardianAI - INFO - Class distribution after combining: {'1': 850, '0': 350, 'Benign': 150, 'Backdoor': 100, 'Brute Force': 100, 'Exploit': 100, 'PortScan': 100, 'DDoS': 100, 'Trojan': 100, '6': 100, '3': 100, '5': 100, '4': 100, 'Spyware': 50, 'Worm': 50, 'Keylogger': 50, 'Dropper': 50, '2': 50, 'Ransomware': 50, '11': 50, '8': 50, '7': 50, '13': 50, '9': 50, '10': 50, '12': 50, 'Violent Threat': 50}
+2025-06-21 12:07:06,647 - GuardianAI - INFO - Applied SMOTE. New class distribution: {'Benign': np.int64(500), 'DDoS': np.int64(500), 'Intrusion': np.int64(500), 'Phishing': np.int64(500), 'Malware': np.int64(500), 'Worm': np.int64(500), 'Brute Force': np.int64(500), 'PortScan': np.int64(500), 'Exploit': np.int64(500), 'Spyware': np.int64(500), 'Trojan': np.int64(500), 'Backdoor': np.int64(500), 'Ransomware': np.int64(500), 'Dropper': np.int64(500), 'Keylogger': np.int64(500), '3': np.int64(500), '2': np.int64(500), '6': np.int64(500), '11': np.int64(500), '5': np.int64(500), '8': np.int64(500), '7': np.int64(500), '4': np.int64(500), '13': np.int64(500), '9': np.int64(500), '10': np.int64(500), '12': np.int64(500), 'Violent Threat': np.int64(500)}
+2025-06-21 12:07:47,416 - GuardianAI - INFO - Stratified 5-fold CV accuracy: 0.8474
+2025-06-21 12:07:58,642 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.8685714285714285, 'precision': 0.9473616026137905, 'recall': 0.8685714285714285, 'f1_score': 0.8539992997279828}
+2025-06-21 12:07:58,813 - GuardianAI - INFO - Model saved to guardian_model.pkl
+2025-06-21 12:07:58,814 - GuardianAI - INFO - Model saved successfully to guardian_model.pkl
+2025-06-21 12:07:58,842 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.8685714285714285, 'precision': 0.9473616026137905, 'recall': 0.8685714285714285, 'f1_score': 0.8539992997279828, 'cv_accuracy': np.float64(0.8473571428571429)}
+2025-06-21 12:07:58,942 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 12:07:58,942 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 12:10:18,856 - GuardianAI - INFO - Loaded 1000 samples from phishing
+2025-06-21 12:10:19,288 - GuardianAI - INFO - Loaded 1000 samples from cicids
+2025-06-21 12:10:20,308 - GuardianAI - INFO - Loaded 1000 samples from ember
+2025-06-21 12:10:20,312 - GuardianAI - INFO - Loaded 50 samples from violent_threats
+2025-06-21 12:10:20,315 - GuardianAI - INFO - Combined 3050 total samples from 4 datasets
+2025-06-21 12:10:20,316 - GuardianAI - INFO - Class distribution after combining: {'Malware': 850, 'Benign': 500, 'Brute Force': 100, 'PortScan': 100, 'Exploit': 100, 'Trojan': 100, 'DDoS': 100, 'Backdoor': 100, '6': 100, '3': 100, '5': 100, '4': 100, 'Spyware': 50, 'Worm': 50, 'Keylogger': 50, 'Dropper': 50, '2': 50, 'Ransomware': 50, '11': 50, '8': 50, '7': 50, '13': 50, '9': 50, '10': 50, '12': 50, 'Violent Threat': 50}
+2025-06-21 12:10:24,927 - GuardianAI - INFO - Applied SMOTE. New class distribution: {'Benign': np.int64(850), 'Malware': np.int64(850), 'Worm': np.int64(850), 'Brute Force': np.int64(850), 'PortScan': np.int64(850), 'Exploit': np.int64(850), 'Spyware': np.int64(850), 'Trojan': np.int64(850), 'Backdoor': np.int64(850), 'DDoS': np.int64(850), 'Ransomware': np.int64(850), 'Dropper': np.int64(850), 'Keylogger': np.int64(850), '3': np.int64(850), '2': np.int64(850), '6': np.int64(850), '11': np.int64(850), '5': np.int64(850), '8': np.int64(850), '7': np.int64(850), '4': np.int64(850), '13': np.int64(850), '9': np.int64(850), '10': np.int64(850), '12': np.int64(850), 'Violent Threat': np.int64(850)}
+2025-06-21 12:11:26,003 - GuardianAI - INFO - Stratified 5-fold CV accuracy: 0.9529
+2025-06-21 12:11:41,844 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.9597737556561086, 'precision': 0.9658206333092274, 'recall': 0.9597737556561086, 'f1_score': 0.9557323675870071}
+2025-06-21 12:11:41,964 - GuardianAI - INFO - Model saved to guardian_model.pkl
+2025-06-21 12:11:41,965 - GuardianAI - INFO - Model saved successfully to guardian_model.pkl
+2025-06-21 12:11:42,015 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.9597737556561086, 'precision': 0.9658206333092274, 'recall': 0.9597737556561086, 'f1_score': 0.9557323675870071, 'cv_accuracy': np.float64(0.9529411764705882)}
+2025-06-21 12:11:42,121 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 12:11:42,122 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 12:12:56,001 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:12:56,025 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 12:12:56,025 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 12:12:56,045 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:13:09,225 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:13:09,239 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:13:09,249 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:14:19,655 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:14:19,657 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:19] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:14:25,101 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:14:25,102 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:25] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:14:25,205 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:25] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:14:35,120 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:14:35,120 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:35] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:14:35,198 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:35] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:14:39,371 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:14:39,372 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:39] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:14:39,471 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:39] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:14:44,123 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:14:44,124 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:44] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:14:44,221 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:14:44] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:15:33,334 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:15:33,335 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:15:33] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:15:33,532 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:15:33] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:15:44,282 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:15:44,354 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:15:44,430 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:15:44,432 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:15:46,629 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:16:05,177 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:16:05,206 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:16:05,222 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:16:05,888 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:16:05,911 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:16:05] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:16:55,327 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:16:55,351 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 12:16:55,351 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 12:16:55,363 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:17:11,159 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:17:11,209 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:17:11,236 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:17:48,696 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:17:48,698 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:17:48] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:18:01,256 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:18:01,258 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:18:01] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:18:01,304 - GuardianAI - ERROR - Error during analysis: list index out of range
+Traceback (most recent call last):
+  File "D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\app.py", line 73, in analyze_threat
+    result = guardian.threat_detector.predict_threat(features, original_text=text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\guardian_ai.py", line 247, in predict_threat
+    model_predictions = {self.class_names[i]: float(predictions[i]) for i in range(len(predictions))}
+                         ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2025-06-21 12:18:01,307 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:18:01] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-06-21 12:26:29,212 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:26:29,248 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 12:26:29,249 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 12:26:29,269 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:26:42,164 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:26:42,180 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:26:42,204 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:29:08,465 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:29:08,466 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:29:08] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:29:13,253 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:29:13,254 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:29:13] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:29:13,286 - GuardianAI - ERROR - Error during analysis: list index out of range
+Traceback (most recent call last):
+  File "D:\Github Repos\Cyber-Threat-Analyzing-System\ML_python_Core\backend\app.py", line 73, in analyze_threat
+    result = guardian.threat_detector.predict_threat(features, original_text=text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github Repos\Cyber-Threat-Analyzing-System\ML_python_Core\backend\guardian_ai.py", line 254, in predict_threat
+    model_predictions = {self.class_names[i]: float(predictions[i]) for i in range(len(predictions))}
+                         ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2025-06-21 12:29:13,292 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:29:13] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-06-21 12:30:53,124 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:30:53,127 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:30:53,140 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:30:53,775 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:30:53,780 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:30:55,331 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:31:12,729 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:31:12,731 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:31:12,751 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:31:12,774 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:34:07,729 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:34:07,731 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:34:07,770 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 12:34:07,774 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 12:34:07,796 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:34:20,699 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:34:20,701 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:34:20,717 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:34:20,736 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:45:18,239 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:45:18,243 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:45:18,304 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 12:45:18,308 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 12:45:18,350 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:45:32,330 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:45:32,332 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:45:32,358 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:45:32,381 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:46:08,933 - GuardianAI - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\raw_unicode_escape.py', reloading
+2025-06-21 12:46:08,935 - GuardianAI - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-06-21 12:46:10,545 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:46:26,119 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:46:26,121 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:46:26,134 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:46:26,147 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:46:26,365 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:46:26,369 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:46:26] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:46:31,625 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:46:31,625 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:46:31] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:46:31,669 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:46:31] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:46:51,569 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 12:46:51,604 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:46:51] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 12:46:51,712 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 12:46:51] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 12:48:10,561 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:48:10,569 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:48:10,780 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:48:10,784 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:48:10,786 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 12:48:12,747 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:48:30,167 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:48:30,169 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:48:30,186 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:48:30,200 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:48:47,340 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\train_model.py', reloading
+2025-06-21 12:48:47,359 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\test_model.py', reloading
+2025-06-21 12:48:47,361 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\test_api.py', reloading
+2025-06-21 12:48:47,363 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\security\\validation.py', reloading
+2025-06-21 12:48:47,364 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\security\\middleware.py', reloading
+2025-06-21 12:48:47,367 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\security\\auth.py', reloading
+2025-06-21 12:48:47,378 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\convert_arff.py', reloading
+2025-06-21 12:48:47,383 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\generate_synthetic_data.py', reloading
+2025-06-21 12:48:47,388 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian\\ml\\threat_detector.py', reloading
+2025-06-21 12:48:49,319 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 12:49:09,209 - GuardianAI - INFO - Successfully loaded class names directly from the trained model.
+2025-06-21 12:49:09,211 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 12:49:09,234 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 12:49:09,248 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 12:50:18,386 - GuardianAI - INFO - Loaded 1000 samples from phishing
+2025-06-21 12:50:18,813 - GuardianAI - INFO - Loaded 1000 samples from cicids
+2025-06-21 12:50:20,090 - GuardianAI - INFO - Loaded 1000 samples from ember
+2025-06-21 12:50:20,095 - GuardianAI - INFO - Loaded 50 samples from violent_threats
+2025-06-21 12:50:20,099 - GuardianAI - INFO - Loaded 50 samples from benign_conversational
+2025-06-21 12:50:20,109 - GuardianAI - INFO - Combined 3100 total samples from 5 datasets
+2025-06-21 12:50:20,110 - GuardianAI - INFO - Class distribution after combining: {'Malware': 850, 'Benign': 550, 'Brute Force': 100, 'PortScan': 100, 'Exploit': 100, 'Trojan': 100, 'DDoS': 100, 'Backdoor': 100, '6': 100, '3': 100, '5': 100, '4': 100, 'Spyware': 50, 'Worm': 50, 'Keylogger': 50, 'Dropper': 50, '2': 50, 'Ransomware': 50, '11': 50, '8': 50, '7': 50, '13': 50, '9': 50, '10': 50, '12': 50, 'Violent Threat': 50}
+2025-06-21 12:50:24,625 - GuardianAI - INFO - Applied SMOTE. New class distribution: {'Benign': np.int64(850), 'Malware': np.int64(850), 'Worm': np.int64(850), 'Brute Force': np.int64(850), 'PortScan': np.int64(850), 'Exploit': np.int64(850), 'Spyware': np.int64(850), 'Trojan': np.int64(850), 'Backdoor': np.int64(850), 'DDoS': np.int64(850), 'Ransomware': np.int64(850), 'Dropper': np.int64(850), 'Keylogger': np.int64(850), '3': np.int64(850), '2': np.int64(850), '6': np.int64(850), '11': np.int64(850), '5': np.int64(850), '8': np.int64(850), '7': np.int64(850), '4': np.int64(850), '13': np.int64(850), '9': np.int64(850), '10': np.int64(850), '12': np.int64(850), 'Violent Threat': np.int64(850)}
+2025-06-21 12:52:16,872 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 12:52:16,872 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 12:52:27,328 - GuardianAI - INFO - Loaded trained classifier from D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 12:52:27,329 - GuardianAI - INFO - Starting model training process...
+2025-06-21 12:52:28,022 - GuardianAI - INFO - Loaded 1000 samples from phishing
+2025-06-21 12:52:28,627 - GuardianAI - INFO - Loaded 1000 samples from cicids
+2025-06-21 12:52:30,133 - GuardianAI - INFO - Loaded 1000 samples from ember
+2025-06-21 12:52:30,137 - GuardianAI - INFO - Loaded 50 samples from violent_threats
+2025-06-21 12:52:30,141 - GuardianAI - INFO - Loaded 50 samples from benign_conversational
+2025-06-21 12:52:30,145 - GuardianAI - INFO - Combined 3100 total samples from 5 datasets
+2025-06-21 12:52:30,147 - GuardianAI - INFO - Class distribution after combining: {'Malware': 850, 'Benign': 550, 'Brute Force': 100, 'PortScan': 100, 'Exploit': 100, 'Trojan': 100, 'DDoS': 100, 'Backdoor': 100, '6': 100, '3': 100, '5': 100, '4': 100, 'Spyware': 50, 'Worm': 50, 'Keylogger': 50, 'Dropper': 50, '2': 50, 'Ransomware': 50, '11': 50, '8': 50, '7': 50, '13': 50, '9': 50, '10': 50, '12': 50, 'Violent Threat': 50}
+2025-06-21 12:52:30,150 - GuardianAI - INFO - Training model on 3100 samples with 26 classes.
+2025-06-21 12:52:30,150 - GuardianAI - INFO - Generating sentence embeddings for training data... (This may take a while)
+2025-06-21 12:57:26,399 - GuardianAI - INFO - Applying SMOTE to balance class distribution...
+2025-06-21 12:57:27,131 - GuardianAI - INFO - Applied SMOTE. New class distribution: {'Benign': 850, 'Malware': 850, 'Worm': 850, 'Brute Force': 850, 'PortScan': 850, 'Exploit': 850, 'Spyware': 850, 'Trojan': 850, 'Backdoor': 850, 'DDoS': 850, 'Ransomware': 850, 'Dropper': 850, 'Keylogger': 850, '3': 850, '2': 850, '6': 850, '11': 850, '5': 850, '8': 850, '7': 850, '4': 850, '13': 850, '9': 850, '10': 850, '12': 850, 'Violent Threat': 850}
+2025-06-21 12:57:27,138 - GuardianAI - INFO - Starting model training...
+2025-06-21 12:59:09,531 - GuardianAI - INFO - Performing stratified 5-fold cross-validation...
+2025-06-21 13:06:01,927 - GuardianAI - INFO - Stratified 5-fold CV accuracy: 0.9896
+2025-06-21 13:07:21,071 - GuardianAI - INFO - Classifier model saved successfully to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:07:21,072 - GuardianAI - INFO - Model training complete. Final metrics: {'accuracy': 0.9882352941176471, 'precision': 0.9880850064109646, 'recall': 0.9882352941176471, 'f1_score': 0.9880677350170387}
+2025-06-21 13:07:21,077 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.9882352941176471, 'precision': 0.9880850064109646, 'recall': 0.9882352941176471, 'f1_score': 0.9880677350170387}
+2025-06-21 13:07:21,233 - GuardianAI - INFO - Classifier model saved successfully to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:07:21,234 - GuardianAI - INFO - Model saved to D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:09:15,673 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:09:15,673 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:09:20,709 - GuardianAI - INFO - Loaded trained classifier from D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:09:20,719 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:09:20,719 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:09:23,858 - GuardianAI - INFO - Loaded trained classifier from D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:09:23,860 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 13:09:23,886 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 13:09:23,887 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 13:09:23,901 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 13:09:36,869 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:09:36,869 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:09:42,551 - GuardianAI - INFO - Loaded trained classifier from D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:09:42,560 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:09:42,561 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:09:45,708 - GuardianAI - INFO - Loaded trained classifier from D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\trained_model.pkl
+2025-06-21 13:09:45,711 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 13:09:45,725 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 13:09:45,744 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 13:10:27,249 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:10:27,251 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:10:27] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:10:38,996 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:10:38,998 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:10:38] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:10:39,137 - GuardianAI - ERROR - Error during analysis: list index out of range
+Traceback (most recent call last):
+  File "D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\app.py", line 73, in analyze_threat
+    result = guardian.threat_detector.predict_threat(features, original_text=text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Github Repos\Cyber-Threat-Analyzing-System\ML_Python_Core\backend\guardian_ai.py", line 220, in predict_threat
+    model_predictions = {self.class_names[i]: float(predictions[i]) for i in range(len(predictions))}
+                         ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2025-06-21 13:10:39,141 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:10:39] "[35m[1mPOST /api/analyze HTTP/1.1[0m" 500 -
+2025-06-21 13:11:19,916 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 13:11:19,920 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 13:11:20,509 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 13:11:20,516 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\guardian_ai.py', reloading
+2025-06-21 13:11:25,221 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 13:11:41,921 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:11:41,922 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:11:47,086 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:11:47,092 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:11:47,093 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:11:50,244 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:11:50,245 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 13:11:50,262 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 13:11:50,280 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 13:15:19,516 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:15:19,516 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:15:24,861 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:15:24,872 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:15:24,873 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:15:27,911 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:15:27,913 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 13:15:27,934 - GuardianAI - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-21 13:15:27,935 - GuardianAI - INFO - [33mPress CTRL+C to quit[0m
+2025-06-21 13:15:27,946 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 13:15:43,991 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:15:43,991 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:15:49,681 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:15:49,688 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:15:49,688 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:15:53,349 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:15:53,355 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 13:15:53,382 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 13:15:53,402 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 13:16:34,023 - GuardianAI - INFO -  * Detected change in 'D:\\Github Repos\\Cyber-Threat-Analyzing-System\\ML_Python_Core\\backend\\ui_app.py', reloading
+2025-06-21 13:16:35,395 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:16:35,397 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:16:35] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:16:36,759 - GuardianAI - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-21 13:16:49,444 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:16:49,445 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:16:55,718 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:16:55,724 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-21 13:16:55,724 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:16:58,831 - GuardianAI - INFO - Successfully loaded 26 class names directly from the trained model.
+2025-06-21 13:16:58,833 - GuardianAI - INFO - Starting Flask application...
+2025-06-21 13:16:58,848 - GuardianAI - WARNING -  * Debugger is active!
+2025-06-21 13:16:58,861 - GuardianAI - INFO -  * Debugger PIN: 824-486-579
+2025-06-21 13:16:59,128 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:16:59,130 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:16:59] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:16:59,225 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:16:59] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:17:18,594 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:18,595 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:18] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:18,686 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:18] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:17:25,100 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:25,101 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:25] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:25,156 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:25] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:17:33,028 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:33,029 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:33] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:33,089 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:33] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:17:37,278 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:37,279 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:37] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:39,039 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:39,041 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:39] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:39,094 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:39,095 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:39] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:49,419 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:49,420 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:49] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:49,480 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:49] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:17:57,346 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:17:57,347 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:57] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:17:57,420 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:17:57] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:18:01,200 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:18:01,201 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:18:01] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:18:04,825 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:18:04,827 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:18:04] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:18:05,631 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:18:05,632 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:18:05] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:18:05,685 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:18:05,687 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:18:05] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:18:52,842 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:18:52,843 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:18:52] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:18:52,915 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:18:52] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:19:15,204 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:19:15,205 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:15] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:19:15,281 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:15] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:19:18,079 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:19:18,080 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:18] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:19:18,169 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:18] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:19:19,589 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:19:19,590 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:19] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:19:19,646 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:19] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:19:20,476 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:19:20,477 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:20] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:19:20,543 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:20] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:19:21,799 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:19:21,799 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:21] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:19:21,853 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:21] "POST /api/analyze HTTP/1.1" 200 -
+2025-06-21 13:19:29,577 - GuardianAI - INFO - Health check response: {'status': 'healthy', 'model_loaded': True}
+2025-06-21 13:19:29,578 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:29] "GET /api/health HTTP/1.1" 200 -
+2025-06-21 13:19:29,642 - GuardianAI - INFO - 127.0.0.1 - - [21/Jun/2025 13:19:29] "POST /api/analyze HTTP/1.1" 200 -

@@ -67,55 +67,83 @@ class DatasetProcessor:
         self.datasets = {
             'phishing': {
                 'path': '../cyb datasets/Phising Datset/phishing_dataset.csv',
-                'label_column': 'Result',
-                'text_column': 'text'
+                'label_column': 'Result'
             },
             'cicids': {
                 'path': '../cyb datasets/CICIDS2017/CICIDS2017_sample.csv',
-                'label_column': ' Label',
-                'text_column': 'text'
+                'label_column': ' Label' # Note the leading space
             },
             'ember': {
                 'path': '../cyb datasets/EMBER/ember2018_sample.csv',
-                'label_column': 'label',
-                'text_column': 'text'
+                'label_column': 'label'
+            },
+            'violent_threats': {
+                'path': '../cyb datasets/ViolentThreats/Violent_Threats_Dataset.csv',
+                'label_column': 'ThreatType'
+            },
+            'benign_conversational': {
+                'path': '../cyb datasets/BenignConversational/Benign_Conversational.csv',
+                'label_column': 'ThreatType'
             }
         }
 
     def load_dataset(self, dataset_name: str) -> Optional[pd.DataFrame]:
         if dataset_name not in self.datasets:
             raise ValueError(f"Unknown dataset: {dataset_name}")
+        
         dataset_info = self.datasets[dataset_name]
         try:
             csv_path = os.path.join(os.path.dirname(__file__), dataset_info['path'])
-            if os.path.exists(csv_path):
-                df = pd.read_csv(csv_path)
-                # Unify label column
-                if dataset_info['label_column'] in df.columns:
-                    df = df.rename(columns={dataset_info['label_column']: 'ThreatType'})
-                # If no 'text' column, create one from all string columns
-                if 'text' not in df.columns:
-                    text_col = None
-                    for col in df.columns:
-                        if df[col].dtype == object and col.lower() != 'threattype':
-                            text_col = col
-                            break
-                    if text_col:
-                        df['text'] = df[text_col].astype(str)
-                    else:
-                        df['text'] = df.apply(lambda row: ' '.join([str(x) for x in row.values]), axis=1)
-                # Ensure both columns exist
-                if 'ThreatType' not in df.columns or 'text' not in df.columns:
-                    self.logger.error(f"Dataset {dataset_name} missing required columns after processing.")
-                    return None
-                # Drop rows with missing values in key columns
-                df = df.dropna(subset=['ThreatType', 'text'])
-                return df[['text', 'ThreatType']]
-            else:
+            if not os.path.exists(csv_path):
                 self.logger.warning(f"Dataset not found: {csv_path}")
                 return None
+            
+            df = pd.read_csv(csv_path)
+            
+            # --- Robust Column Handling ---
+            
+            # 1. Find and Unify the label column
+            label_col_to_rename = None
+            # Check for primary label, then common alternatives
+            possible_labels = [dataset_info.get('label_column'), 'ThreatType', 'Label', 'label', 'Result', ' Label']
+            # Filter out None from the list
+            possible_labels = [label for label in possible_labels if label]
+            
+            for col in possible_labels:
+                if col in df.columns:
+                    label_col_to_rename = col
+                    break
+            
+            if not label_col_to_rename:
+                self.logger.error(f"No suitable label column found in {dataset_name}. Searched for {possible_labels}. Skipping.")
+                return None
+
+            df = df.rename(columns={label_col_to_rename: 'ThreatType'})
+            
+            # 2. Clean the ThreatType column immediately
+            df['ThreatType'] = df['ThreatType'].astype(str).str.strip()
+
+            # --- Add a mapping for numeric labels based on dataset ---
+            if dataset_name == 'phishing' or dataset_name == 'ember':
+                # Assuming 0 is Benign and 1 is Malicious/Phishing
+                label_map = {'0': 'Benign', '1': 'Malware'}
+                df['ThreatType'] = df['ThreatType'].replace(label_map)
+            # Add other specific mappings if needed for other datasets
+            
+            # 3. Create a unified 'text' column
+            if 'text' not in df.columns:
+                feature_cols = [col for col in df.columns if col != 'ThreatType']
+                if not feature_cols:
+                    self.logger.error(f"Dataset {dataset_name} has no feature columns to create 'text'. Skipping.")
+                    return None
+                df['text'] = df[feature_cols].astype(str).agg(' '.join, axis=1)
+
+            # 4. Final check and return
+            df = df.dropna(subset=['ThreatType', 'text'])
+            return df[['text', 'ThreatType']]
+
         except Exception as e:
-            self.logger.error(f"Error loading {dataset_name} dataset: {e}")
+            self.logger.error(f"Error loading {dataset_name} dataset: {e}", exc_info=True)
             return None
 
     def combine_datasets(self) -> pd.DataFrame:
@@ -129,13 +157,12 @@ class DatasetProcessor:
                 self.logger.warning(f"Failed to load {dataset_name}")
         if not all_dfs:
             raise ValueError("No datasets were successfully loaded")
-        # Align columns (should be just ['text', 'ThreatType'])
-        for i, df in enumerate(all_dfs):
-            for col in ['text', 'ThreatType']:
-                if col not in df.columns:
-                    all_dfs[i][col] = '' if col == 'text' else 'Benign'
+        
         combined_df = pd.concat(all_dfs, ignore_index=True)
+        # The cleaning is now done in load_dataset, but an extra strip doesn't hurt.
+        combined_df['ThreatType'] = combined_df['ThreatType'].str.strip()
         combined_df = combined_df.dropna(subset=['ThreatType', 'text'])
+        
         self.logger.info(f"Combined {len(combined_df)} total samples from {len(all_dfs)} datasets")
         # Check class balance
         class_counts = combined_df['ThreatType'].value_counts()
@@ -143,240 +170,197 @@ class DatasetProcessor:
         return combined_df
 
 class HighPrecisionThreatDetector:
-    """High-precision threat detection using TF-IDF, embeddings, SVM, and Random Forest"""
+    """High-precision threat detection using an advanced sentence embedding model"""
     
     def __init__(self, model_path: str = None):
         self.is_trained = False
-        if model_path:
-            loaded = joblib.load(model_path)
-            if isinstance(loaded, dict):
-                self.model = loaded.get('model')
-                self.vectorizer = loaded.get('vectorizer')
-                self.feature_names = loaded.get('feature_names', [])
-                self.class_names = loaded.get('class_names', [
-                    'Benign', 'Malware', 'Phishing', 'DDoS', 'Intrusion',
-                    'Backdoor', 'Brute Force', 'Exploit', 'Keylogger',
-                    'PortScan', 'Ransomware', 'Spyware', 'Trojan', 'Worm'
-                ])
+        # Load the powerful sentence transformer model
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        
+        # Initialize class_names as an empty list
+        self.class_names = []
+        
+        if model_path and os.path.exists(model_path):
+            # The new model file only contains the trained classifier
+            self.model = joblib.load(model_path)
                 self.is_trained = True
+            
+            # --- The Definitive Fix ---
+            # The model's internal list is the only source of truth.
+            if hasattr(self.model, 'classes_'):
+                self.class_names = self.model.classes_
+                logging.info(f"Successfully loaded {len(self.class_names)} class names directly from the trained model.")
             else:
-                self.model = loaded
-                self.vectorizer = None
-                self.feature_names = getattr(self.model, 'feature_names_in_', [])
-                self.class_names = [
-                    'Benign', 'Malware', 'Phishing', 'DDoS', 'Intrusion',
-                    'Backdoor', 'Brute Force', 'Exploit', 'Keylogger',
-                    'PortScan', 'Ransomware', 'Spyware', 'Trojan', 'Worm'
-                ]
-                self.is_trained = True
+                logging.error("CRITICAL: Trained model is missing the .classes_ attribute. Predictions will fail.")
+            
         else:
             # Initialize for training
             self.model = None
-            self.vectorizer = None
-            self.feature_names = []
-            self.class_names = [
-                'Benign', 'Malware', 'Phishing', 'DDoS', 'Intrusion',
-                'Backdoor', 'Brute Force', 'Exploit', 'Keylogger',
-                'PortScan', 'Ransomware', 'Spyware', 'Trojan', 'Worm'
-            ]
             self.is_trained = False
+            
         self.threat_category_mapping = {
-            'Malware': ['Backdoor', 'Ransomware', 'Spyware', 'Trojan', 'Worm'],
+            'Malware': ['Backdoor', 'Ransomware', 'Spyware', 'Trojan', 'Worm', 'Dropper'],
             'Phishing': ['Keylogger'],
             'DDoS': ['DDoS'],
-            'Intrusion': ['Brute Force', 'Exploit', 'PortScan']
+            'Intrusion': ['Brute Force', 'Exploit', 'PortScan'],
+            'Violent Threat': ['Violent Threat'],
+            'Benign': ['Benign']
         }
         
-    def prepare_features(self, data):
+    def prepare_features(self, data: dict):
         """
-        Prepare features for prediction using TF-IDF and embeddings.
-        Accepts a DataFrame or dict of features.
+        Prepare features for prediction using sentence embeddings.
+        Accepts a dict containing the text to be analyzed.
         """
-        if isinstance(data, dict):
-            if 'text' in data:
-                if self.vectorizer:
-                    return self.vectorizer.transform([data['text']]).toarray()
-                else:
-                    raise ValueError("Vectorizer not loaded. Cannot process raw text.")
-            data = pd.DataFrame([data])
-        elif isinstance(data, list) and isinstance(data[0], dict):
-            data = pd.DataFrame(data)
-        
-        # Use the feature names from the model
-        if hasattr(self, 'feature_names') and self.feature_names:
-            features = data[self.feature_names].values
+        if 'text' in data and isinstance(data['text'], str):
+            # Generate a dense vector (embedding) for the input text
+            return self.embedding_model.encode([data['text']], show_progress_bar=False)
         else:
-            # Fallback: use all numeric columns
-            features = data.select_dtypes(include=['number']).values
-        return features
+            raise ValueError("Input data must be a dictionary with a 'text' key containing a string.")
         
     def predict_threat(self, features: np.ndarray, original_text: str = "") -> ThreatAnalysisResult:
         start_time = time.time()
         
         # Get model predictions
-        predictions = self.model.predict_proba(features)
-        if predictions.size == 0:
-            raise ValueError("Model returned empty predictions")
-            
-        threat_idx = np.argmax(predictions[0])
-        if threat_idx >= len(self.class_names):
-            threat_idx = 0  # Default to 'Benign' if index is out of range
-            
-        confidence = float(predictions[0][threat_idx])
+        predictions = self.model.predict_proba(features)[0]
         
-        # Get specific threat name
-        specific_threat = self.class_names[threat_idx]
+        # Create a dictionary of threat probabilities
+        model_predictions = {self.class_names[i]: float(predictions[i]) for i in range(len(predictions))}
         
-        # Map to general category
-        threat_category = 'Benign'
-        for category, threats in self.threat_category_mapping.items():
-            if specific_threat in threats:
-                threat_category = category
+        # Get the highest probability prediction
+        predicted_index = np.argmax(predictions)
+        confidence = float(predictions[predicted_index])
+        specific_threat_name = self.class_names[predicted_index]
+        
+        # Determine the general threat type
+        threat_type = "Benign"
+        for general_type, specific_list in self.threat_category_mapping.items():
+            if specific_threat_name in specific_list:
+                threat_type = general_type
                 break
         
-        # Determine risk level
-        if confidence >= 0.8:
+        # --- Upgraded Risk Level Logic ---
+        risk_level = "LOW" # Default risk level
+        
+        # Rule 1: Threat-based override (highest priority)
+        if threat_type == 'Violent Threat' and confidence > 0.5:
             risk_level = 'CRITICAL'
-        elif confidence >= 0.6:
-            risk_level = 'HIGH'
-        elif confidence >= 0.4:
+        elif threat_type == 'Violent Threat':
+            # It's identified as violent, but confidence is too low.
+            # Call it medium risk, as it's better to be cautious.
             risk_level = 'MEDIUM'
+        elif threat_type in ['Malware', 'Phishing', 'Intrusion']:
+            # Rule 2: Confidence-based assessment for other serious threats
+            if confidence > 0.75:
+                risk_level = "HIGH"
+            elif confidence > 0.4:
+                risk_level = "MEDIUM"
         else:
-            risk_level = 'LOW'
-            
-        # Get feature importance
-        if hasattr(self.model, 'feature_importances_'):
-            feature_importance = dict(zip(self.feature_names, 
-                                        self.model.feature_importances_))
+                risk_level = "LOW"
         else:
-            feature_importance = {}
-            
-        # Get model predictions for all classes
-        model_predictions = {
-            'main_model': dict(zip(self.class_names, predictions[0]))
-        }
+            # Rule 3: General confidence-based assessment
+            if confidence > 0.9:
+                risk_level = "HIGH"
+            elif confidence > 0.6:
+                risk_level = "MEDIUM"
+
+        end_time = time.time()
         
-        processing_time = time.time() - start_time
-        
-        return ThreatAnalysisResult(
+        result = ThreatAnalysisResult(
             original_text=original_text,
-            threat_type=threat_category,
-            specific_threat_name=specific_threat,
+            threat_type=threat_type,
+            specific_threat_name=specific_threat_name,
             confidence=confidence,
             risk_level=risk_level,
             model_predictions=model_predictions,
-            feature_importance=feature_importance,
+            feature_importance={},
             timestamp=datetime.now().isoformat(),
-            processing_time=processing_time
+            processing_time=end_time - start_time
         )
+        
+        return result
 
     def save_model(self, model_path: str) -> None:
-        """Save the trained model and vectorizer to disk."""
-        if not hasattr(self, 'model') or self.model is None:
-            raise ValueError("No trained model to save")
-        dir_name = os.path.dirname(model_path)
-        if dir_name:
-            os.makedirs(dir_name, exist_ok=True)
-        # Save the model and vectorizer
-        with open(model_path, 'wb') as f:
-            joblib.dump({
-                'model': self.model,
-                'vectorizer': self.vectorizer,
-                'feature_names': self.feature_names,
-                'class_names': self.class_names
-            }, f)
-        logger.info(f"Model saved to {model_path}")
+        """Saves only the trained classifier model."""
+        if self.model:
+            joblib.dump(self.model, model_path)
+            logging.info(f"Classifier model saved successfully to {model_path}")
+        else:
+            logging.error("No model to save.")
 
-    def train_model(self, X_vectorized: np.ndarray, labels: List[str]) -> Dict[str, float]:
-        """Train the model on the given vectorized features and labels."""
-        if not X_vectorized.size or not labels:
-            raise ValueError("No training data provided")
+    def train_model(self, X_texts: List[str], labels: List[str]) -> Dict[str, float]:
+        """
+        Train the classifier on sentence embeddings.
+        X_texts should be a list of raw text strings.
+        """
+        self.class_names = sorted(list(set(labels)))
+        logging.info(f"Training model on {len(X_texts)} samples with {len(self.class_names)} classes.")
         
-        # Train the model
-        self.model = RandomForestClassifier(
-            n_estimators=100,
-            max_depth=10,
-            random_state=42
-        )
-        self.model.fit(X_vectorized, labels)
+        # Generate embeddings for all training texts
+        logging.info("Generating sentence embeddings for training data... (This may take a while)")
+        X_embeddings = self.embedding_model.encode(X_texts, show_progress_bar=True)
         
-        # Calculate metrics
-        y_pred = self.model.predict(X_vectorized)
+        # Apply SMOTE to balance the dataset
+        logging.info("Applying SMOTE to balance class distribution...")
+        smote = SMOTE(k_neighbors=5, random_state=42)
+        try:
+            X_resampled, y_resampled = smote.fit_resample(X_embeddings, labels)
+            logging.info(f"Applied SMOTE. New class distribution: {pd.Series(y_resampled).value_counts().to_dict()}")
+        except ValueError as e:
+            logging.warning(f"SMOTE failed: {e}. Using original data. Consider adding more samples to small classes.")
+            X_resampled, y_resampled = X_embeddings, labels
+
+        # Initialize and train the classifier
+        self.model = RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')
+        logging.info("Starting model training...")
+        self.model.fit(X_resampled, y_resampled)
+        
+        # Evaluate with cross-validation
+        logging.info("Performing stratified 5-fold cross-validation...")
+        cv_scores = cross_val_score(self.model, X_resampled, y_resampled, cv=5, scoring='accuracy')
+        logging.info(f"Stratified 5-fold CV accuracy: {cv_scores.mean():.4f}")
+        
+        # Final evaluation on a held-out test set
+        X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42, stratify=y_resampled)
+        self.model.fit(X_train, y_train)
+        y_pred = self.model.predict(X_test)
+        
         metrics = {
-            'accuracy': accuracy_score(labels, y_pred),
-            'precision': precision_score(labels, y_pred, average='weighted'),
-            'recall': recall_score(labels, y_pred, average='weighted'),
-            'f1_score': f1_score(labels, y_pred, average='weighted')
+            'accuracy': accuracy_score(y_test, y_pred),
+            'precision': precision_score(y_test, y_pred, average='weighted', zero_division=0),
+            'recall': recall_score(y_test, y_pred, average='weighted', zero_division=0),
+            'f1_score': f1_score(y_test, y_pred, average='weighted', zero_division=0)
         }
         
-        logger.info(f"Model training complete. Metrics: {metrics}")
+        self.is_trained = True
         return metrics
 
 class GuardianAI:
-    """Main GuardianAI class for threat detection"""
-    
+    """The main AI class orchestrating training and analysis."""
     def __init__(self):
         self.logger = logging.getLogger('GuardianAI')
-        self.detector = HighPrecisionThreatDetector()
-        self.dataset_processor = DatasetProcessor()
+        self.data_processor = DatasetProcessor()
+        model_path = os.path.join(os.path.dirname(__file__), 'trained_model.pkl')
+        self.detector = HighPrecisionThreatDetector(model_path=model_path)
         
     def train(self) -> Dict[str, float]:
-        """Train the model using combined datasets"""
-        try:
-            # Load and combine datasets
-            combined_df = self.dataset_processor.combine_datasets()
-            X_text = combined_df['text'].astype(str).values
-            y = combined_df['ThreatType'].astype(str).values
-
-            # Convert numeric labels to threat types if needed
-            threat_types = []
-            for label in y:
-                if label == '0':
-                    threat_types.append('Benign')
-                elif label == '1':
-                    threat_types.append(np.random.choice(['Malware', 'Phishing', 'DDoS', 'Intrusion']))
-                else:
-                    threat_types.append(label)
-
-            # Create and fit TF-IDF vectorizer
-            self.detector.vectorizer = TfidfVectorizer(max_features=1000)
-            X_vectorized = self.detector.vectorizer.fit_transform(X_text).toarray()
-
-            # --- SMOTE for class balancing ---
-            try:
-                smote = SMOTE(random_state=42)
-                X_vectorized, threat_types = smote.fit_resample(X_vectorized, threat_types)
-                self.logger.info(f"Applied SMOTE. New class distribution: {dict(pd.Series(threat_types).value_counts())}")
-            except Exception as e:
-                self.logger.warning(f"SMOTE failed: {e}")
-
-            # --- Cross-validation ---
-            from sklearn.model_selection import StratifiedKFold
-            skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-            scores = []
-            for train_idx, test_idx in skf.split(X_vectorized, threat_types):
-                X_train, X_test = X_vectorized[train_idx], X_vectorized[test_idx]
-                y_train, y_test = np.array(threat_types)[train_idx], np.array(threat_types)[test_idx]
-                model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
-                model.fit(X_train, y_train)
-                y_pred = model.predict(X_test)
-                acc = accuracy_score(y_test, y_pred)
-                scores.append(acc)
-            avg_cv_acc = np.mean(scores)
-            self.logger.info(f"Stratified 5-fold CV accuracy: {avg_cv_acc:.4f}")
-
-            # Train the final model
-            metrics = self.detector.train_model(X_vectorized, threat_types)
-
-            # Save the model
-            self.detector.save_model('guardian_model.pkl')
-            self.logger.info("Model saved successfully to guardian_model.pkl")
-
-            metrics['cv_accuracy'] = avg_cv_acc
+        """Trains the model using sentence embeddings."""
+        self.logger.info("Starting model training process...")
+        
+        # 1. Load and combine datasets
+        df = self.data_processor.combine_datasets()
+        X_train_texts = df['text'].tolist()
+        y_train_labels = df['ThreatType'].tolist()
+        
+        # 2. Train the detector
+        metrics = self.detector.train_model(X_train_texts, y_train_labels)
+        
+        # 3. Save the trained model
+        model_path = os.path.join(os.path.dirname(__file__), 'trained_model.pkl')
+        self.detector.save_model(model_path)
+        
+        self.logger.info(f"Model training complete. Final metrics: {metrics}")
             return metrics
-        except Exception as e:
-            self.logger.error(f"Error in training: {e}")
-            raise
     
     def analyze_threat_secure(self, text: str, client_ip: str = None) -> ThreatAnalysisResult:
         """Secure threat analysis with OWASP protections"""

@@ -81,23 +81,55 @@ def load_ember_dataset():
         logger.error(f'Error loading EMBER dataset: {e}')
         return None
 
+def load_violent_threats_dataset():
+    """Loads the violent threats dataset"""
+    try:
+        csv_path = get_dataset_path('Violent_Threats_Dataset.csv', 'ViolentThreats')
+        if os.path.exists(csv_path):
+            df = pd.read_csv(csv_path)
+            # Ensure ThreatType column exists and is named correctly
+            if 'ThreatType' in df.columns:
+                return df[['text', 'ThreatType']]
+            else:
+                logger.warning('Violent threats dataset missing "ThreatType" column.')
+                return None
+        else:
+            logger.warning('Violent threats dataset not found.')
+            return None
+    except Exception as e:
+        logger.error(f'Error loading violent threats dataset: {e}')
+        return None
+
 def combine_datasets():
     """Combine all datasets with strict label alignment and diagnostics"""
     phishing = load_phishing_dataset()
     cicids = load_cicids_dataset()
     ember = load_ember_dataset()
-    all_dfs = [df for df in [phishing, cicids, ember] if df is not None]
+    violent_threats = load_violent_threats_dataset()
+    
+    all_dfs = [df for df in [phishing, cicids, ember, violent_threats] if df is not None]
     if not all_dfs:
         raise ValueError('No datasets loaded!')
-    # Align columns
-    all_columns = set()
-    for df in all_dfs:
-        all_columns.update(df.columns)
-    all_columns = sorted(list(all_columns))
-    for df in all_dfs:
-        for col in all_columns:
-            if col not in df.columns:
-                df[col] = 0
+    
+    # Create a unified 'text' column if it doesn't exist
+    for i, df in enumerate(all_dfs):
+        if 'text' not in df.columns:
+            string_cols = [col for col in df.columns if df[col].dtype == object and col.lower() != 'threattype']
+            if string_cols:
+                all_dfs[i]['text'] = df[string_cols].fillna('').astype(str).agg(' '.join, axis=1)
+            else:
+                # If no string columns, create a placeholder
+                all_dfs[i]['text'] = ''
+        
+        # Ensure 'ThreatType' column exists and is string type
+        if 'ThreatType' in df.columns:
+            all_dfs[i]['ThreatType'] = df['ThreatType'].astype(str)
+        else:
+            all_dfs[i]['ThreatType'] = 'Benign' # Default if missing
+        
+        # Keep only the essential columns to ensure clean concatenation
+        all_dfs[i] = all_dfs[i][['text', 'ThreatType']]
+
     # Drop all label columns except 'ThreatType'
     label_cols = ['Result', 'Label', 'label', ' Label']
     for i, df in enumerate(all_dfs):
