@@ -1,0 +1,58 @@
+2025-06-17 14:53:22,247 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-17 14:53:22,248 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-17 14:53:26,501 - GuardianAI - INFO - Loading datasets...
+2025-06-17 14:53:26,626 - GuardianAI - INFO - Loaded 11055 phishing samples
+2025-06-17 14:53:52,888 - GuardianAI - INFO - Loaded 458831 CICIDS2017 samples
+2025-06-17 14:54:17,414 - GuardianAI - INFO - Loaded 50000 EMBER samples
+2025-06-17 14:54:17,612 - GuardianAI - INFO - Using 3000 total samples for training:
+2025-06-17 14:54:17,612 - GuardianAI - INFO - - Phishing samples: 1000
+2025-06-17 14:54:17,613 - GuardianAI - INFO - - CICIDS2017 samples: 1000
+2025-06-17 14:54:17,613 - GuardianAI - INFO - - EMBER samples: 1000
+2025-06-17 14:54:17,613 - GuardianAI - INFO - Starting model training...
+2025-06-17 14:54:17,613 - GuardianAI - INFO - Starting model training...
+2025-06-17 14:58:26,687 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.9033333333333333, 'precision': 0.9093183313593893, 'recall': 0.9033333333333333, 'f1_score': 0.8973658590552053}
+2025-06-17 14:58:26,787 - GuardianAI - INFO - Training complete!
+2025-06-17 14:58:26,788 - GuardianAI - INFO - Model metrics: {'accuracy': 0.9033333333333333, 'precision': 0.9093183313593893, 'recall': 0.9033333333333333, 'f1_score': 0.8973658590552053}
+2025-06-17 14:58:26,788 - GuardianAI - ERROR - Error during training: No trained model to save
+2025-06-17 14:59:14,259 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-17 14:59:14,260 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-17 14:59:18,737 - GuardianAI - INFO - Loading datasets...
+2025-06-17 14:59:18,842 - GuardianAI - INFO - Loaded 11055 phishing samples
+2025-06-17 14:59:44,917 - GuardianAI - INFO - Loaded 458831 CICIDS2017 samples
+2025-06-17 15:00:10,143 - GuardianAI - INFO - Loaded 50000 EMBER samples
+2025-06-17 15:00:10,387 - GuardianAI - INFO - Using 3000 total samples for training:
+2025-06-17 15:00:10,388 - GuardianAI - INFO - - Phishing samples: 1000
+2025-06-17 15:00:10,389 - GuardianAI - INFO - - CICIDS2017 samples: 1000
+2025-06-17 15:00:10,390 - GuardianAI - INFO - - EMBER samples: 1000
+2025-06-17 15:00:10,391 - GuardianAI - INFO - Starting model training...
+2025-06-17 15:00:10,392 - GuardianAI - INFO - Starting model training...
+2025-06-17 15:04:08,385 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.9033333333333333, 'precision': 0.9093183313593893, 'recall': 0.9033333333333333, 'f1_score': 0.8973658590552053}
+2025-06-17 15:04:08,451 - GuardianAI - INFO - Training complete!
+2025-06-17 15:04:08,452 - GuardianAI - INFO - Model metrics: {'accuracy': 0.9033333333333333, 'precision': 0.9093183313593893, 'recall': 0.9033333333333333, 'f1_score': 0.8973658590552053}
+2025-06-17 15:04:09,252 - GuardianAI - INFO - Complete model saved to D:\cyberthreat system\project\backend\trained_model.pkl
+2025-06-17 15:04:09,253 - GuardianAI - INFO - Model saved successfully to D:\cyberthreat system\project\backend\trained_model.pkl!
+2025-06-17 15:15:36,990 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-17 15:15:36,990 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-17 15:15:40,661 - GuardianAI - INFO - Complete model loaded from D:\cyberthreat system\project\backend\trained_model.pkl
+2025-06-17 15:15:40,662 - GuardianAI - INFO - Model loaded successfully
+2025-06-17 15:16:34,460 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-17 15:16:34,461 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-17 15:16:37,816 - GuardianAI - INFO - Loading datasets...
+2025-06-17 15:16:37,956 - GuardianAI - INFO - Loaded 11055 phishing samples
+2025-06-17 15:17:04,542 - GuardianAI - INFO - Loaded 458831 CICIDS2017 samples
+2025-06-17 15:17:30,743 - GuardianAI - INFO - Loaded 50000 EMBER samples
+2025-06-17 15:17:31,000 - GuardianAI - INFO - Using 3000 total samples for training:
+2025-06-17 15:17:31,001 - GuardianAI - INFO - - Phishing samples: 1000
+2025-06-17 15:17:31,001 - GuardianAI - INFO - - CICIDS2017 samples: 1000
+2025-06-17 15:17:31,004 - GuardianAI - INFO - - EMBER samples: 1000
+2025-06-17 15:17:31,005 - GuardianAI - INFO - Starting model training...
+2025-06-17 15:17:31,005 - GuardianAI - INFO - Starting model training...
+2025-06-17 15:22:06,768 - GuardianAI - INFO - Model training complete. Metrics: {'accuracy': 0.9033333333333333, 'precision': 0.9093183313593893, 'recall': 0.9033333333333333, 'f1_score': 0.8973658590552053}
+2025-06-17 15:22:06,853 - GuardianAI - INFO - Training complete!
+2025-06-17 15:22:06,853 - GuardianAI - INFO - Model metrics: {'accuracy': 0.9033333333333333, 'precision': 0.9093183313593893, 'recall': 0.9033333333333333, 'f1_score': 0.8973658590552053}
+2025-06-17 15:22:07,327 - GuardianAI - INFO - Complete model saved to D:\cyberthreat system\project\backend\trained_model.pkl
+2025-06-17 15:22:07,327 - GuardianAI - INFO - Model saved successfully to D:\cyberthreat system\project\backend\trained_model.pkl!
+2025-06-17 15:22:58,455 - GuardianAI - INFO - Use pytorch device_name: cpu
+2025-06-17 15:22:58,455 - GuardianAI - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-17 15:23:09,775 - GuardianAI - INFO - Complete model loaded from D:\cyberthreat system\project\backend\trained_model.pkl
+2025-06-17 15:23:09,776 - GuardianAI - INFO - Model loaded successfully
