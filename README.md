@@ -675,15 +675,6 @@ copies or substantial portions of the Software.
 
 If this project helps you, please consider giving it a ⭐ star on GitHub!
 
-### 📞 **Get in Touch**
-
-- 📧 **Email**: contact@cyberthreatsystem.com
-- 🐦 **Twitter**: [@CyberThreatAI](https://twitter.com/CyberThreatAI)
-- 💬 **Discord**: [Join our community](https://discord.gg/cyberthreat)
-- 📖 **Blog**: [Read our latest updates](https://blog.cyberthreatsystem.com)
-
----
-
 **Made with ❤️ by the Cyber Threat Analyzing System Team**
 
 *Protecting the digital world, one threat at a time* 🛡️
